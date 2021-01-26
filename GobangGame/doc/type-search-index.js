@@ -1,0 +1,1 @@
+typeSearchIndex = [{"p":"game","l":"Buttons"},{"p":"game","l":"Chess"},{"p":"game","l":"Chessboard"},{"p":"game","l":"ChessUI"},{"p":"game","l":"CountScore"},{"l":"所有类","url":"allclasses-index.html"}]
