@@ -37,7 +37,7 @@ public class ChessUI extends JPanel implements Chessboard
 		jf.setTitle("Gobang");
 		jf.setDefaultCloseOperation(3);
 		//Set width and height
-		jf.setSize(750, 650);
+		jf.setSize(1500, 1300);
 		jf.setResizable(false);
 		//Get logo
 		jf.setIconImage(new ImageIcon("src/com/dsq/Fivechesse1128/Image/qqÍ¼±ê.png").getImage());

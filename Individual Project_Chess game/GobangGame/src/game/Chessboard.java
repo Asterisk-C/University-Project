@@ -4,7 +4,7 @@ package game;
 public interface Chessboard 
 {
 	//The chessboard is square, set the initial length(both rows and columns) of the chessboard
-	public final static int LENGTH = 15;	
+	public final static int LENGTH = 25;	
 	
 	//Inital position(x,y) to draw the chessboard
 	public final static int X_START = 30;	
