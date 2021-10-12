@@ -1,12 +1,12 @@
-import java.util.Queue;
+package unknown;
 
-public class Q3 
+public class Q2 
 {
 
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		Queue <int[]> q;
+		System.out.println(Character.toString((char)(65)));
 	}
 
 }
