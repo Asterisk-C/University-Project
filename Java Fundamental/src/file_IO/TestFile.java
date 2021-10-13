@@ -2,6 +2,7 @@ package file_IO;
 
 import java.io.File;
 import java.io.FileInputStream;
+import java.io.FileOutputStream;
 import java.util.Arrays;
 import java.util.Date;
 import java.io.IOException;
@@ -10,17 +11,38 @@ public class TestFile
 {
 	public static void main(String[] args)
 	{
+		
+//		//Read NBA.txt
+//		try
+//		{
+//			File f = new File("E:/Github Projects/University-Project/Java Fundamental/NBA.txt");
+//			FileInputStream fs = new FileInputStream(f);
+//			
+//			byte[] bArray = new byte[(int) f.length()];
+//			fs.read(bArray);
+//			for(byte b: bArray)
+//			{
+//				System.out.println(b);
+//			}
+//			fs.close();
+//		}
+//		catch(IOException e)
+//		{
+//			e.printStackTrace();
+//		}
+		
+		// Write information into CBA.txt
 		try
 		{
-			File f = new File("E:/Github Projects/University-Project/Java Fundamental/NBA.txt");
-			FileInputStream fs = new FileInputStream(f);
+			File f = new File("E:/Github Projects/University-Project/Java Fundamental/CBA.txt");
+			//If the folder doesn't exist, build it.
+			File dir = f.getParentFile();
+			if(!dir.exists())
+				dir.mkdirs();
 			
-			byte[] bArray = new byte[(int) f.length()];
-			fs.read(bArray);
-			for(byte b: bArray)
-			{
-				System.out.println(b);
-			}
+			FileOutputStream fs = new FileOutputStream(f);
+			byte[] data = {67, 66, 65};
+			fs.write(data);
 			fs.close();
 		}
 		catch(IOException e)
