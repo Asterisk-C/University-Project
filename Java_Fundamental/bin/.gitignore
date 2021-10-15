@@ -4,12 +4,12 @@
 /Main.class
 /Millionaire.class
 /NarcissisticNumber.class
+/Test$EnemyHeroIsDeadException.class
+/Test.class
 /TwoDimensionalArray.class
 /character/
+/collection/
 /digit/
+/exception/
 /file_IO/
 /inheritance/
-/Test.class
-/Test$EnemyHeroIsDeadException.class
-/exception/
-/collection/
