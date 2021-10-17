@@ -3,41 +3,21 @@ package sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Bubble_Sort 
+public class Insertion_Sort 
 {
-	public static void bubbleSort1(int[] arr)
+	public static void insertionSort(int[] arr)
 	{
-		int i, j, tmp;
-		
-		for(i = arr.length - 1; i > 0; i--)
+		for(int i = 1; i < arr.length; i++)
 		{
-			for(j = 0; j < i; j++)
+			int key = arr[i];
+			int j = i - 1;
+			
+			while(j >= 0 && key < arr[j])
 			{
-				if(arr[j] > arr[j+1])
-				{
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-				}			
+				arr[j+1] = arr[j];
+				j--;
 			}
-		}
-	}
-	
-	public static void bubbleSort2(int[] arr)
-	{
-		int i, j, tmp;
-		
-		for(i = 0; i < arr.length - 1; i++)
-		{
-			for(j = 0; j < arr.length - 1 - i; j++)
-			{
-				if(arr[j] > arr[j+1])
-				{
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-				}			
-			}
+			arr[j+1] = key;
 		}
 	}
 
@@ -59,8 +39,9 @@ public class Bubble_Sort
 	    System.out.println();
 		
 	    System.out.println("排序后的元素值：");
-	    bubbleSort2(n);
+	    insertionSort(n);
 	    System.out.println(Arrays.toString(n));
+
 	}
 
 }

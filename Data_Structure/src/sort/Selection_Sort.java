@@ -3,41 +3,25 @@ package sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Bubble_Sort 
+public class Selection_Sort 
 {
-	public static void bubbleSort1(int[] arr)
+	public static void selectionSort(int[] arr)
 	{
-		int i, j, tmp;
+		int tmp;
 		
-		for(i = arr.length - 1; i > 0; i--)
+		for(int i = 0; i < arr.length - 1; i++)
 		{
-			for(j = 0; j < i; j++)
+			int minIndex = i;
+			for(int j = i; j < arr.length; j++)
 			{
-				if(arr[j] > arr[j+1])
+				if(arr[j] < arr[minIndex])
 				{
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-				}			
+					minIndex = j;
+				}
 			}
-		}
-	}
-	
-	public static void bubbleSort2(int[] arr)
-	{
-		int i, j, tmp;
-		
-		for(i = 0; i < arr.length - 1; i++)
-		{
-			for(j = 0; j < arr.length - 1 - i; j++)
-			{
-				if(arr[j] > arr[j+1])
-				{
-					tmp = arr[j];
-					arr[j] = arr[j+1];
-					arr[j+1] = tmp;
-				}			
-			}
+			tmp = arr[i];
+			arr[i] = arr[minIndex];
+			arr[minIndex] = tmp;
 		}
 	}
 
@@ -59,8 +43,9 @@ public class Bubble_Sort
 	    System.out.println();
 		
 	    System.out.println("排序后的元素值：");
-	    bubbleSort2(n);
+	    selectionSort(n);
 	    System.out.println(Arrays.toString(n));
+
 	}
 
 }

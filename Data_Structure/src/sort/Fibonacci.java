@@ -1,12 +1,12 @@
 package sort;
 
-public class Test 
+public class Fibonacci 
 {
 
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		Test test = new Test();
+		Fibonacci test = new Fibonacci();
 		System.out.println(test.fibonacci(6));
 		
 	}
