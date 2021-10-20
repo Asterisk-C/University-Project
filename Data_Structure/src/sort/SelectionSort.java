@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Selection_Sort 
+public class SelectionSort 
 {
 	public static void selectionSort(int[] arr)
 	{

@@ -3,7 +3,7 @@ package sort;
 //Java implementation of QuickSort
 import java.io.*;
 
-class Quick_Sort2
+class QuickSort2
 {
 	// A utility function to swap two elements
 	static void swap(int[] arr, int i, int j)

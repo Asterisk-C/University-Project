@@ -1,3 +1,8 @@
+import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Iterator;
+import java.util.Map;
+import java.util.Set;
 
 public class Test 
 {
@@ -5,15 +10,28 @@ public class Test
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		//打印单数    
-        for (int j = 1; j < 10; j++) 
+		Map<Integer, Boolean> mp = new HashMap<>();
+		for(int i = 0; i < 5; i++)
         {
-            if(0==j%4) 
-                break; //如果是双数，直接结束循环
-             
-            System.out.println(j);
+            mp.put(i, true);
         }
-
+		
+		// Print method 1	
+		Set<Integer> s = mp.keySet();	
+		Iterator itr = s.iterator();
+	    while (itr.hasNext()) 
+	    {
+	        System.out.print(itr.next() + " ");
+	    }
+	    
+	    System.out.println();
+	    
+	    // Print method 2
+        for (Map.Entry<Integer,Boolean> me : mp.entrySet())
+        {
+            System.out.print(me.getKey() + " ");
+        }
+	    
 	}
 
 }

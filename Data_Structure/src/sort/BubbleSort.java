@@ -3,7 +3,7 @@ package sort;
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Bubble_Sort 
+public class BubbleSort 
 {
 	public static void bubbleSort1(int[] arr)
 	{

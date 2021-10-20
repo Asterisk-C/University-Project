@@ -2,7 +2,7 @@ package array;
 
 import java.util.HashMap;
 
-public class Non_Repeating_Element 
+public class NonRepeatingElement 
 {
 	// Simple solution
 	public static int nRE1(int[] arr)
