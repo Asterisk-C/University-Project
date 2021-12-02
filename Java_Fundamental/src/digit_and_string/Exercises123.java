@@ -1,4 +1,4 @@
-package character;
+package digit_and_string;
 
 import java.util.Arrays;
 import java.util.Random;

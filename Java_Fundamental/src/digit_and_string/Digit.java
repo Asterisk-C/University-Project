@@ -1,6 +1,6 @@
-package digit;
+package digit_and_string;
 
-public class TestNumber 
+public class Digit 
 {
 
 	public static void main(String[] args) 
@@ -35,17 +35,21 @@ public class TestNumber
 //		int i = Integer.parseInt(s);
 //		System.out.println(i);
 	
-//		Exercise
-//		float f = 3.14f;
-//		String s = String.valueOf(f);
-//		System.out.println(s);
-//		String ss = "abc";
-//		float ff = Float.parseFloat(s);
-//		System.out.println(ff);
-//		long d = Long.parseLong(ss);
-//		System.out.println(d);
+//		Exercise		
+		System.out.println(Byte.MAX_VALUE);
+		System.out.println(Byte.MIN_VALUE);
+		System.out.println(Short.MAX_VALUE);
+		System.out.println(Short.MIN_VALUE);
+		System.out.println(Integer.MAX_VALUE);
+		System.out.println(Integer.MIN_VALUE);
+		System.out.println(Long.MAX_VALUE);
+		System.out.println(Long.MIN_VALUE);
+		System.out.println("------------------------");
+		System.out.println(Float.MAX_VALUE);
+		System.out.println(Float.MIN_VALUE);
+		System.out.println(Double.MAX_VALUE);
+		System.out.println(Double.MIN_VALUE);
 		
-
 	}
 
 }
