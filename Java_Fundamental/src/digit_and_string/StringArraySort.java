@@ -24,8 +24,8 @@ public class StringArraySort extends RandomString
 			{
 				char c1 = strArray[j].charAt(0);
 				char c2 = strArray[j + 1].charAt(0);
-				String s1 = Character.toString(c1);
-				String s2 = Character.toString(c2);
+				String s1 = String.valueOf(c1);
+				String s2 = String.valueOf(c2);
 				if(Character.toUpperCase(c1) > Character.toUpperCase(c2) && !s1.equalsIgnoreCase(s2))
 				{
 					temp = strArray[j];
