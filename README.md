@@ -1,2 +1,2 @@
 # Java
-Some of my Java programs
+Some of my Java projects and exercises.
