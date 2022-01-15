@@ -12,8 +12,7 @@ public class TestBufferedReader
 	{
 		// TODO Auto-generated method stub
 		File f = new File("E:/Java/University-Project/Java_Fundamental/NBA.txt");
-		try
-		(
+		try(
 				FileReader fr = new FileReader(f);
 				BufferedReader br = new BufferedReader(fr);
 		)
