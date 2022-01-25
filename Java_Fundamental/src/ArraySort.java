@@ -29,7 +29,7 @@ public class ArraySort
 		ArraySort array = new ArraySort();		
 		System.out.println("a: " + Arrays.toString(a));
 		//selectiveSort
-		array.selectiveSort(a1);
+		array.selectionSort(a1);
 		System.out.println("a1: " + Arrays.toString(a1));
 		//bubbleSort
 		array.bubbleSort(a2);
@@ -43,7 +43,7 @@ public class ArraySort
 		System.out.println(Arrays.equals(a, a1));
 	}
 	
-	public void selectiveSort(int[] s)
+	public void selectionSort(int[] s)
 	{
 		for(int i = 0; i < s.length - 1; i++)
 		{

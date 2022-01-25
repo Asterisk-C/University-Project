@@ -20,7 +20,7 @@ public class Hero
     // ÷ÿ–¥toString∑Ω∑®
     public String toString() 
     {
-        return name;
+        return String.format("[%s(hp: %.0f)]", name, hp);
     }
  
 }
