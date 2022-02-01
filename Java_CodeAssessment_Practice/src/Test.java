@@ -7,9 +7,12 @@ public class Test {
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		Test test = new Test();
-		int[] nums = {1,2,3,4,5,6};
-		System.out.println(Arrays.toString(test.twoSum(nums, 10)));
+		char c = 'a';
+		for(int i = 0; i < 6; i++)
+		{
+			++c;
+		}
+		System.out.println(String.valueOf(c));
 	}
 
 	public int[] twoSum(int[] nums, int target) {

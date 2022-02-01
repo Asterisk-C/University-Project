@@ -22,8 +22,8 @@ public class Q3
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		int[] test = {100, 100};
-		System.out.println(solution(100, 100, test));
+		int[] test = {100, 63, 1, 6, 2, 63};
+		System.out.println(solution(100, 63, test));
 
 	}
 

@@ -13,60 +13,85 @@ package guidewire;
 
 public class Q1 
 {
+//	public static String Palindrome(int N,int K)
+//    {
+//        if(K==1) //if there is only 1 distinct character required
+//        {
+//            char[] ans = new char[N];
+//            for(int i=0;i<N;i++)
+//            {
+//            	ans[i] = 'a';
+//            }
+//            String str = String.valueOf(ans);
+//            return str;
+//        }
+//        
+//        if (K > ((N+1)/2)) //if K is greater than (N+1)/2 then no string is possible 
+//        {
+//            char[] ans = new char[N];
+//            for(int i=0;i<N;i++)
+//            ans[i] = '*';
+//            String str = String.valueOf(ans);
+//            return str;
+//        }
+//        char[] ans = new char[N];
+//        int cnt = N/K; //every character will occur N/K times except the last character that occurs N/K + N%K times
+//        int distinct = 1;
+//        char c = 'a'; //Starting with character a
+//        int i = 0; //starting position
+//        int j = N-1; //ending position
+//        while(i <= j)
+//        {
+//            ans[i] = c;
+//            ans[j] = c;
+//            i++;
+//            j--;
+//            cnt -= 2;
+//            if(cnt <= 0)
+//            {
+//                if (distinct == K)
+//                {
+//                    cnt = N%K;
+//                }
+//                else
+//                {
+//                    cnt = N/K;
+//                    c++;
+//                    distinct++;
+//                }
+//            }
+//        }
+//        String str = String.valueOf(ans);
+//        return str;
+//    }
+	
 	public static String Palindrome(int N,int K)
-    {
-        if(K==1) //if there is only 1 distinct character required
-        {
-            char[] ans = new char[N];
-            for(int i=0;i<N;i++)
-            ans[i] = 'a';
-            String str = String.valueOf(ans);
-            return str;
-        }
-        
-        if (K > ((N+1)/2)) //if K is greater than (N+1)/2 then no string is possible 
-        {
-            char[] ans = new char[N];
-            for(int i=0;i<N;i++)
-            ans[i] = '*';
-            String str = String.valueOf(ans);
-            return str;
-        }
-        char[] ans = new char[N];
-        int cnt = N/K; //every character will occur N/K times except the last character that occurs N/K + N%K times
-        int distinct = 1;
-        char c = 'a'; //Starting with character a
-        int i = 0; //starting position
-        int j = N-1; //ending position
-        while(i <= j)
-        {
-            ans[i] = c;
-            ans[j] = c;
-            i++;
-            j--;
-            cnt -= 2;
-            if(cnt <= 0)
-            {
-                if (distinct == K)
-                {
-                    cnt = N%K;
-                }
-                else
-                {
-                    cnt = N/K;
-                    c++;
-                    distinct++;
-                }
-            }
-        }
-        String str = String.valueOf(ans);
-        return str;
-    }
+	{
+		String str = "";
+		char[] ans = new char[N];
+		char c = 'a';
+		int count = 1;
+		int start = 0;
+		int end = N - 1;
+		
+		while(start <= end)
+		{
+			ans[start] = c;
+			ans[end] = c;
+			start++;
+			end--;
+			count++;
+			if(count <= K)
+				c++;
+		}
+		str = String.valueOf(ans);
+		return str;
+	}
 
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		System.out.println(Palindrome(51, 26));
+		System.out.println(Palindrome(51, 2));
 	}
 
 }
