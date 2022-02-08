@@ -1,6 +1,6 @@
 package collection;
 
-public class Hero 
+public class Hero implements Comparable<Hero>
 {
     public String name;
     public float hp;
@@ -16,11 +16,29 @@ public class Hero
     {
         this.name = name;
     }
+    
+    // Add another constructor of Hero
+    public Hero(String name, int hp, int damage) 
+    {
+        this.name = name;
+        this.hp = hp;
+        this.damage = damage;
+    }
+    
+    @Override
+    public int compareTo(Hero anotherHero)
+    {
+    	if(damage < anotherHero.damage)
+    		return 1;
+    	else
+    		return -1;
+    }
  
     // ÖØÐ´toString·½·¨
+    @Override
     public String toString() 
     {
-        return String.format("[%s(hp: %.0f)]", name, hp);
+        return String.format("[%s(hp: %.0f, damgage: %d)]", name, hp, damage);
     }
  
 }

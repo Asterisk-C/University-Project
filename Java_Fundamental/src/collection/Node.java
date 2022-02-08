@@ -3,19 +3,19 @@ package collection;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Node 
+public class Node<T extends Comparable<T>> 
 {
-	public Node leftNode;
-	public Node rightNode;
-	public Object value;
+	public Node<T> leftNode;
+	public Node<T> rightNode;
+	public T value;
 	
-	public void add(Object v)
+	public void add(T v)
 	{
 		if(value == null)
 			value = v;
 		else
 		{
-			if((Integer)v > (Integer)value)
+			if(v.compareTo(value) >= 0)
 			{
 				if(rightNode == null)
 					rightNode = new Node();
@@ -30,9 +30,9 @@ public class Node
 		}
 	}
 	
-	public List<Object> traverseValue()
+	public List<T> traverseValue()
 	{
-		List<Object> values = new ArrayList<>();
+		List<T> values = new ArrayList<>();
 		
 		if(leftNode != null)
 			values.addAll(leftNode.traverseValue());
@@ -48,7 +48,7 @@ public class Node
 	public static void main(String[] args) 
 	{
 		// TODO Auto-generated method stub
-		Node test = new Node();
+		Node<Integer> test = new Node<>();
 		int[] t1 = {67, 7, 30, 73, 10, 0, 78, 81, 10, 74};
 		for(int i: t1)
 		{
