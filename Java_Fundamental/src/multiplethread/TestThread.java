@@ -28,15 +28,20 @@ public class TestThread
         leesin.hp = 455;
         leesin.damage = 80;
          
-        //¸ÇÂ×¹¥»÷ÌáÄª
-        while(!teemo.isDead()){
-            gareen.attackHero(teemo);
-        }
- 
-        //ÉÍ½ðÁÔÈË¹¥»÷Ã¤É®
-        while(!leesin.isDead()){
-            bh.attackHero(leesin);
-        }
+//        //¸ÇÂ×¹¥»÷ÌáÄª
+//        while(!teemo.isDead()){
+//            gareen.attackHero(teemo);
+//        }
+// 
+//        //ÉÍ½ðÁÔÈË¹¥»÷Ã¤É®
+//        while(!leesin.isDead()){
+//            bh.attackHero(leesin);
+//        }
+        
+        KillThread killThread1 = new KillThread(gareen,teemo);
+        killThread1.start();
+        KillThread killThread2 = new KillThread(bh,leesin);
+        killThread2.start();
 
 	}
 
