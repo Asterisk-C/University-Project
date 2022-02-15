@@ -1,5 +1,5 @@
 package array;
-//Write an efficient program to find smallest and second smallest element in an array.
+// Write an efficient program to find smallest and second smallest element in an array.
 
 public class FindTheSmallestElement 
 {
@@ -7,6 +7,12 @@ public class FindTheSmallestElement
 	{
 		int smallest = Integer.MAX_VALUE;
 		int second_smallest = Integer.MAX_VALUE;
+		
+		if (arr.length < 2)
+        {
+            System.out.println("Invalid Input.");
+            return;
+        }
 		
 		for(int i = 0; i < arr.length; i++)
 		{

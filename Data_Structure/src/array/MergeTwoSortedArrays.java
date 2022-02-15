@@ -1,4 +1,5 @@
 package array;
+// Given two sorted arrays, the task is to merge them in a sorted manner.
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -90,9 +91,9 @@ public class MergeTwoSortedArrays
 //		System.out.print(Arrays.toString(arr1) + " and " + Arrays.toString(arr2));
 //		System.out.println();
 		
-//		System.out.println(Arrays.toString(merge2(arr1, arr2)));
+		System.out.println(Arrays.toString(merge2(arr1, arr2)));
 		
-		printMerge3(arr1, arr2);
+//		printMerge3(arr1, arr2);
 
 	}
 

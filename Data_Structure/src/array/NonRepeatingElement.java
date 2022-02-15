@@ -1,4 +1,5 @@
 package array;
+// Find the first non-repeating element in a given array of integers.
 
 import java.util.HashMap;
 
@@ -20,7 +21,7 @@ public class NonRepeatingElement
 		return -1;
 	}
 	
-	// Efficient solution
+	// Efficient solution		
 	public static int nRE2(int[] arr)
 	{
 		HashMap<Integer, Integer> hm = new HashMap<>();
@@ -29,16 +30,17 @@ public class NonRepeatingElement
 		{
 			int count = 1;
 			if(hm.containsKey(arr[i]))
-				hm.put(arr[i], hm.get(arr[i]) + 1);	
+				hm.put(arr[i], hm.get(arr[i]) + 1);
 			else
 				hm.put(arr[i], count);
 		}
 		
-		for(int i = 0; i < arr.length; i++)
+		for(int j = 0; j < arr.length; j++)
 		{
-			if(hm.get(arr[i]) == 1)
-				return arr[i];
+			if(hm.get(arr[j]) == 1)
+				return arr[j];
 		}
+		
 		return -1;
 	}
 
