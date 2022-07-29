@@ -44,7 +44,7 @@ public class Test
 		shortage[end--] = 6;
 		shortage[end--] = 5;
 		
-		int test = 7;
+		int test = 6;
 		int x = shortage[test++];
 		for(int i:shortage)
 		{
